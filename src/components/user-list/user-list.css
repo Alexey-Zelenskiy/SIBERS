@@ -1,0 +1,29 @@
+h1 {
+  font-size: 16px;
+  color: black;
+  width: 225px;
+  margin-right: auto;
+}
+
+ul {
+  overflow: scroll;
+  height: 600px;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+li {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #c9c7c7;
+  justify-content: space-between;
+}
+img {
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  margin-inline-end: 25px;
+}

@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  width: 40%;
+  height: 53rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+  margin-top: 20px;
+  flex: 1;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #363434;
+}
+.top {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  margin-top: 3.5%;
+  margin-bottom: 35px;
+}
+.chelka {
+  background-color: #363434;
+  height: 35px;
+  width: 20%;
+  display: flex;
+  position: absolute;
+  margin-bottom: 65%;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.time {
+  color: black;
+  font-weight: 600;
+  margin-right: 72.5%;
+}
+header {
+  width: 100%;
+  text-align: left;
+  margin-top: 0px;
+  display: flex;
+}
+.header {
+  margin-inline-start: 50px;
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+}
+.star {
+  height: 50px;
+  width: 50px;
+  margin-inline-end: 0;
+}
