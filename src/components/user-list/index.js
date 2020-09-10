@@ -9,24 +9,6 @@ const ContactList = (props) => {
   const users = useSelector((state) => state.user.users);
   const ref = useRef();
   const [value, setValue] = useState(null);
-  const [contacts, setContacts] = useState(localStorage.getItem("contacts"));
-  useEffect(() => {
-    if (contacts.length > 0) {
-      dispatch(usersLoaded(JSON.parse(contacts)));
-    } else {
-      dataLoaded();
-    }
-  }, [contacts]);
-
-  function dataLoaded() {
-    fetch(`http://demo.sibers.com/users`)
-      .then((res) => res.json())
-      .then((res) => {
-        dispatch(usersLoaded(res));
-        localStorage.setItem("contacts", JSON.stringify(res));
-      })
-      .catch((reason) => {});
-  }
   const elements = users
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((item, index) => {
@@ -97,7 +79,7 @@ const ContactList = (props) => {
       <form onSubmit={onSubmit}>
         <input
           type="text"
-          placeholder="Введите названеи локации"
+          placeholder="Введите имя"
           onChange={onValueChange}
           value={value}
           className="form-control search-btn "
@@ -129,7 +111,6 @@ const ContactList = (props) => {
                           src={require("../../img/edit.jpg")}
                           onClick={() => {
                             dispatch(setUserId(index));
-                            dispatch(usersLoaded(contactsSearch()));
                           }}
                         />
                       </Link>
