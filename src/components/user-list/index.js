@@ -7,7 +7,7 @@ import { setUser } from "../../redux/actions/user";
 const ContactList = (props) => {
   const users = useSelector((state) => state.user.users);
   const ref = useRef();
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState("");
   // const elements = users
   //   .sort((a, b) => a.name.localeCompare(b.name))
   //   .map((item, index) => {
@@ -110,7 +110,7 @@ const ContactList = (props) => {
       </form>
       <div style={{ width: "98%", display: "flex" }}>
         <ul>
-          {value === null
+          {value === ""
             ? group
             : contactsSearch().map((item, index) => {
                 return (
