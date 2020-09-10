@@ -36,16 +36,16 @@ const ShowUser = () => {
   const tmpFaforite = (item) => {
     setFavorite(!item);
   };
-  const user = useSelector((state) => state.user.users);
+  const user = useSelector((state) => state.user.user);
   const idX = useSelector((state) => state.user.idX);
-  const [name, setName] = useState(user[idX].name);
-  const [phone, setPhone] = useState(user[idX].phone);
-  const [email, setEmail] = useState(user[idX].email);
-  const [username, setCompanyUser] = useState(user[idX].username);
-  const [favorite, setFavorite] = useState(user[idX].favorite);
+  const [name, setName] = useState(user.name);
+  const [phone, setPhone] = useState(user.phone);
+  const [email, setEmail] = useState(user.email);
+  const [username, setCompanyUser] = useState(user.username);
+  const [favorite, setFavorite] = useState(user.favorite);
   const onSave = () => {
     editUser({
-      id: idX,
+      id: user.id,
       name: name,
       phone: phone,
       email: email,
@@ -76,7 +76,7 @@ const ShowUser = () => {
           onClick={() => tmpFaforite(favorite)}
         />
       )}
-      <img src={user[idX].avatar} className="ava" />
+      <img src={user.avatar} className="ava" />
       <form onSubmit={onSubmitName}>
         <input
           type="text"

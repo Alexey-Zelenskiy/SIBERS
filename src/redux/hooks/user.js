@@ -14,7 +14,7 @@ export function useUser() {
   };
   const editUser = (newItem) => {
     const updatedEventsData = data.map((item, index) => {
-      if (index === newItem.id) {
+      if (item.id === newItem.id) {
         return {
           ...item,
           ...newItem,

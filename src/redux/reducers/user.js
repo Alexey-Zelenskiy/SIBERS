@@ -1,7 +1,14 @@
-import { LOADED_USER, SET_ID, EDIT_USER, DELETE_USER } from "../actions/user";
+import {
+  LOADED_USER,
+  SET_ID,
+  EDIT_USER,
+  DELETE_USER,
+  SET_USER,
+} from "../actions/user";
 
 const initialState = {
   users: [],
+  user: [],
   loading: true,
   error: false,
   idX: 0,
@@ -14,6 +21,11 @@ const user = (state = initialState, action) => {
       return {
         ...state,
         users: payload,
+      };
+    case SET_USER:
+      return {
+        ...state,
+        user: payload,
       };
     case SET_ID:
       return {
