@@ -23,6 +23,7 @@ export function useUser() {
         return item;
       }
     });
+    localStorage.setItem("contacts", JSON.stringify(updatedEventsData));
     return dispatch({
       type: EDIT_USER,
       payload: updatedEventsData,

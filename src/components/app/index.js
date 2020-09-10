@@ -15,9 +15,16 @@ function App() {
   const dispatch = useDispatch();
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [contacts, setContacts] = useState(localStorage.getItem("contacts"));
   useEffect(() => {
-    dataLoaded();
-  }, []);
+    if (contacts.length > 0) {
+      dispatch(usersLoaded(JSON.parse(contacts)));
+      setError(false);
+      setLoading(false);
+    } else {
+      dataLoaded();
+    }
+  }, [contacts]);
 
   const tabBar = [
     {
@@ -43,6 +50,7 @@ function App() {
       .then((res) => res.json())
       .then((res) => {
         dispatch(usersLoaded(res));
+        localStorage.setItem("contacts", JSON.stringify(res));
         setError(false);
         setLoading(false);
       })
@@ -98,7 +106,7 @@ function App() {
           alignItems: "center",
         }}
       >
-        {tabBar.map((item, index) => {
+        {/* {tabBar.map((item, index) => {
           return (
             <div
               style={{
@@ -109,50 +117,10 @@ function App() {
               <a style={{ fontSize: 14 }}>{item.name}</a>
             </div>
           );
-        })}
+        })} */}
       </div>
     </div>
   );
 }
 
 export default App;
-
-// const View = ({initialBalance, percentRange, balance}) => {
-
-//   let classNames = 'more';
-//   let btnClass = 'target_btn';
-
-//   if (initialBalance === 15) {
-//     classNames = 'more_none';
-//     btnClass += ' color';
-//   }
-//   return (
-//     <>
-//       <div id='target'>
-//         <header className="header"><h4 className='target_text'>Target indicator Demo</h4></header>
-//         <div className="inside">
-//           <div className="inside_block">
-//             <p>Reached: <span className="progress-bar"><div className="range" style={{width: `${percentRange}%`}}/>
-//               <div className="range_money" style={{width: `${percentRange}%`, textAlign: 'end', fontSize: '13px'}}>
-//                 {percentRange > 0 ? <div>
-//                   <i className="fa fa-sort-asc" aria-hidden="true"/>
-//                 <div className='target_money'>${initialBalance}</div>
-//                 </div> : null}
-//               </div>
-//             </span>
-//             </p>
-//             <div className={btnClass}>
-//               <header>
-//                 <a>Target</a>
-//               </header>
-//               <div className='money'>$15</div>
-//             </div>
-//           </div>
-//           <div className={classNames}><i className="fa fa-info-circle" aria-hidden="true"/>  You need $1 more to reach
-//             your target.
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   )
-// };
