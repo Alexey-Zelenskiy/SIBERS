@@ -37,7 +37,6 @@ const ShowUser = () => {
     setFavorite(!item);
   };
   const user = useSelector((state) => state.user.user);
-  const idX = useSelector((state) => state.user.idX);
   const [name, setName] = useState(user.name);
   const [phone, setPhone] = useState(user.phone);
   const [email, setEmail] = useState(user.email);
@@ -50,6 +49,7 @@ const ShowUser = () => {
       phone: phone,
       email: email,
       favorite: favorite,
+      username: username,
     });
   };
   return (
