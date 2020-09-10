@@ -34,30 +34,30 @@ const ContactList = (props) => {
     else r[group].children.push(e);
     return r;
   }, []);
-  const group = Object.values(groupName).map((item, index) => {
-    return (
-      <div ref={ref} key={index}>
-        <h1 style={{ fontSize: 20, textAlign: "left" }}>{item.group}</h1>
-        {item.children.map((item) => {
-          return (
-            <li>
-              <img src={item.avatar} />
-              <h1>{item.name}</h1>
-              {item.favorite ? (
-                <img className="star" src={require("../../img/star.jpg")} />
-              ) : null}
-              <Link to="/user">
-                <img
-                  src={require("../../img/edit.jpg")}
-                  onClick={() => dispatch(setUserId(index))}
-                />
-              </Link>
-            </li>
-          );
-        })}
-      </div>
-    );
-  });
+  // const group = Object.values(groupName).map((item, index) => {
+  //   return (
+  //     <div ref={ref} key={index}>
+  //       <h1 style={{ fontSize: 20, textAlign: "left" }}>{item.group}</h1>
+  //       {item.children.map((item, index) => {
+  //         return (
+  //           <li>
+  //             <img src={item.avatar} />
+  //             <h1>{item.name}</h1>
+  //             {item.favorite ? (
+  //               <img className="star" src={require("../../img/star.jpg")} />
+  //             ) : null}
+  //             <Link to="/user">
+  //               <img
+  //                 src={require("../../img/edit.jpg")}
+  //                 onClick={() => dispatch(setUserId(index))}
+  //               />
+  //             </Link>
+  //           </li>
+  //         );
+  //       })}
+  //     </div>
+  //   );
+  // });
   const contactsSearch = () => {
     return users.filter((item, index) => {
       return (
@@ -89,7 +89,7 @@ const ContactList = (props) => {
       <div style={{ width: "98%", display: "flex" }}>
         <ul>
           {value === null
-            ? group
+            ? elements
             : contactsSearch().map((item, index) => {
                 return (
                   <div ref={ref} key={index}>

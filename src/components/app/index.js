@@ -17,13 +17,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [contacts, setContacts] = useState(localStorage.getItem("contacts"));
   useEffect(() => {
-    if (contacts.length > 0) {
-      dispatch(usersLoaded(JSON.parse(contacts)));
-      setError(false);
-      setLoading(false);
-    } else {
-      dataLoaded();
-    }
+    dataLoaded();
   }, [contacts]);
 
   const tabBar = [
