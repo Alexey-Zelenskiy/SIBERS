@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "31456744d0ade2ea969303a1aadcf8c9",
+    "revision": "7a0da500d1b4365be3db908dfa6add82",
     "url": "/labs-sibsutis/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/labs-sibsutis/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "095dc50905839bfcbccb",
+    "revision": "609bfd60c1c01ac90459",
     "url": "/labs-sibsutis/static/css/main.237238b3.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/labs-sibsutis/static/js/2.f1807e27.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "095dc50905839bfcbccb",
-    "url": "/labs-sibsutis/static/js/main.50784398.chunk.js"
+    "revision": "609bfd60c1c01ac90459",
+    "url": "/labs-sibsutis/static/js/main.854c480d.chunk.js"
   },
   {
     "revision": "2ef58c1fe2f9aae3a4f4",
