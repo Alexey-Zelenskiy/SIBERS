@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/labs-sibsutis/static/css/main.237238b3.chunk.css",
+    "main.css": "/labs-sibsutis/static/css/main.3a02879c.chunk.css",
     "main.js": "/labs-sibsutis/static/js/main.1eb493bd.chunk.js",
     "main.js.map": "/labs-sibsutis/static/js/main.1eb493bd.chunk.js.map",
     "runtime-main.js": "/labs-sibsutis/static/js/runtime-main.e4ab8afb.js",
@@ -9,10 +9,10 @@
     "static/js/2.71829b74.chunk.js": "/labs-sibsutis/static/js/2.71829b74.chunk.js",
     "static/js/2.71829b74.chunk.js.map": "/labs-sibsutis/static/js/2.71829b74.chunk.js.map",
     "index.html": "/labs-sibsutis/index.html",
-    "precache-manifest.4da3dab7365d80dbc1367598a2b64fcb.js": "/labs-sibsutis/precache-manifest.4da3dab7365d80dbc1367598a2b64fcb.js",
+    "precache-manifest.30613d7098e6b60ac94179f102ed77db.js": "/labs-sibsutis/precache-manifest.30613d7098e6b60ac94179f102ed77db.js",
     "service-worker.js": "/labs-sibsutis/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/labs-sibsutis/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.237238b3.chunk.css.map": "/labs-sibsutis/static/css/main.237238b3.chunk.css.map",
+    "static/css/main.3a02879c.chunk.css.map": "/labs-sibsutis/static/css/main.3a02879c.chunk.css.map",
     "static/js/2.71829b74.chunk.js.LICENSE.txt": "/labs-sibsutis/static/js/2.71829b74.chunk.js.LICENSE.txt",
     "static/media/stena.gif": "/labs-sibsutis/static/media/stena.a1c31330.gif"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.e4ab8afb.js",
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.71829b74.chunk.js",
-    "static/css/main.237238b3.chunk.css",
+    "static/css/main.3a02879c.chunk.css",
     "static/js/main.1eb493bd.chunk.js"
   ]
 }
